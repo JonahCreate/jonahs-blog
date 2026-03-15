@@ -1,0 +1,58 @@
+{
+  "name": "project-golem",
+  "version": "9.1.3",
+  "description": "Project Golem v9.0 (Ultimate Chronos + MultiAgent Edition) - Collaborative AI System",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:security": "jest tests/safeguard.test.js",
+    "build": "cd web-dashboard && npm run build",
+    "// --- 核心啟動 ---": "",
+    "start": "node index.js",
+    "dashboard": "node index.js dashboard",
+    "dev": "nodemon index.js dashboard",
+    "doctor": "node scripts/doctor.js",
+    "// --- 跨平台安裝指令 ---": "",
+    "win:setup": "setup.bat",
+    "unix:setup": "chmod +x setup.sh && ./setup.sh",
+    "unix:start": "./setup.sh",
+    "// --- 自動化 ---": "",
+    "postinstall": "echo [INFO] Golem Core dependencies installed."
+  },
+  "keywords": [
+    "golem",
+    "ai",
+    "puppeteer",
+    "gemini",
+    "neural-memory",
+    "blessed",
+    "chronos"
+  ],
+  "author": "Arvin Chen",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "0.21.0",
+    "adm-zip": "^0.5.16",
+    "blessed": "0.1.81",
+    "blessed-contrib": "4.11.0",
+    "cors": "^2.8.6",
+    "discord.js": "14.14.1",
+    "dotenv": "16.4.5",
+    "express": "5.2.1",
+    "node-telegram-bot-api": "0.65.1",
+    "puppeteer": "22.6.0",
+    "puppeteer-extra": "3.3.6",
+    "puppeteer-extra-plugin-stealth": "2.11.2",
+    "socket.io": "4.8.3",
+    "socket.io-client": "4.8.3",
+    "sqlite3": "^5.1.7",
+    "uuid": "9.0.1"
+  },
+  "devDependencies": {
+    "jest": "^30.3.0",
+    "nodemon": "3.0.2"
+  },
+  "engines": {
+    "node": "^20.0.0"
+  }
+}
